@@ -7,7 +7,7 @@ class StringFunctions {
      * capitalize('HELLO WORLD') // 'Hello world'
      */
     capitalize(input) { 
-      return input; 
+      return input.toLocaleUpperCase(); 
     }
     /**
      * Returns a reversed string. Example: "abc" => "cba"
@@ -17,8 +17,12 @@ class StringFunctions {
      * reverse('abc') // 'cba'
      */
     reverse(input) { 
-      return input;
+      let newString = "";
+    for (let i = input.length - 1; i >= 0; i--) {
+        newString += input[i];
     }
+    return newString; }
+    
     /**
      * Returns an array of the words in a string
      * @param {string} input - the string input to be processed
@@ -27,6 +31,6 @@ class StringFunctions {
      * words('hello world') // ['hello', 'world']
      */
     split(input) { 
-      return [input];
+      return input.split(" ");
     }
 }
